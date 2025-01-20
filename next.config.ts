@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "payload-st.s3interdev.com",
+				hostname: process.env.NEXT_PUBLIC_SERVER_URL_PRD!,
 			},
 		],
 	},
