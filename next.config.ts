@@ -5,15 +5,15 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
 	images: {
 		remotePatterns: [
-			{
-				protocol: "http",
-				hostname: "localhost",
-				port: "3000",
-			},
-			{
-				protocol: "https",
-				hostname: process.env.NEXT_PUBLIC_SERVER_URL_PRD!,
-			},
+			(() => {
+				const url = new URL(process.env.NEXT_PUBLIC_SERVER_URL!);
+
+				return {
+					protocol: url.protocol.replace(":", "") as "http" | "https",
+					hostname: url.hostname,
+					port: url.hostname === "localhost" ? url.port : undefined,
+				};
+			})(),
 		],
 	},
 };

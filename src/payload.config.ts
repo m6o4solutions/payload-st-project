@@ -6,7 +6,7 @@ import { buildConfig } from "payload";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import { Media } from "@/payload/collections/media/schema";
+import { collections } from "@/payload/collections";
 import { Users } from "@/payload/collections/users/schema";
 
 import { lexical } from "@/payload/fields/lexical/schema";
@@ -27,7 +27,7 @@ export default buildConfig({
 		},
 		user: Users.slug,
 	},
-	collections: [Media, Users],
+	collections: collections,
 	db: mongooseAdapter({ url: process.env.DATABASE_URI! }),
 	editor: lexical,
 	email: resend,
