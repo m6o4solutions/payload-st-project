@@ -2,8 +2,10 @@ import { resendAdapter } from "@payloadcms/email-resend";
 
 import { Config } from "payload";
 
+import { env } from "@/lib/env";
+
 export const resend: Config["email"] = resendAdapter({
-	defaultFromAddress: process.env.RESEND_FROM_EMAIL!,
-	defaultFromName: process.env.RESEND_FROM_NAME!,
-	apiKey: process.env.RESEND_API_KEY!,
+	defaultFromAddress: env.RESEND_FROM_EMAIL,
+	defaultFromName: env.RESEND_FROM_NAME,
+	apiKey: env.RESEND_API_KEY,
 });

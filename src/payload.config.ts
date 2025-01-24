@@ -9,6 +9,8 @@ import { fileURLToPath } from "url";
 import { collections } from "@/payload/collections";
 import { Users } from "@/payload/collections/users/schema";
 
+import { env } from "@/lib/env";
+
 import { lexical } from "@/payload/fields/lexical/schema";
 import { resend } from "@/payload/fields/resend/schema";
 
@@ -28,12 +30,12 @@ export default buildConfig({
 		user: Users.slug,
 	},
 	collections: collections,
-	db: mongooseAdapter({ url: process.env.DATABASE_URI! }),
+	db: mongooseAdapter({ url: env.DATABASE_URI }),
 	editor: lexical,
 	email: resend,
 	globals: [],
 	plugins: [...plugins],
-	secret: process.env.PAYLOAD_SECRET!,
+	secret: env.PAYLOAD_SECRET,
 	sharp,
 	typescript: {
 		autoGenerate: true,

@@ -4,13 +4,15 @@ import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 
 import { Media } from "@/payload/collections/media/schema";
 
+import { env } from "@/lib/env";
+
 export const plugins: Plugin[] = [
 	uploadthingStorage({
 		collections: {
 			[Media.slug]: true,
 		},
 		options: {
-			token: process.env.UPLOADTHING_TOKEN!,
+			token: env.UPLOADTHING_TOKEN,
 			acl: "public-read",
 		},
 	}),
