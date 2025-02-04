@@ -1,6 +1,6 @@
 {
-	"name": "payload-starter-template-project",
-	"version": "3.14.0",
+	"name": "payload-st-project",
+	"version": "3.20.0",
 	"description": "Template to get started with Next.js 15, Payload 3.0, MongoDB Tailwind CSS and shadcn/ui.",
 	"type": "module",
 	"scripts": {
@@ -63,7 +63,7 @@
 		"@tailwindcss/typography": "^0.5.16",
 		"@types/escape-html": "^1.0.4",
 		"@types/jsonwebtoken": "^9.0.8",
-		"@types/node": "^22.10.10",
+		"@types/node": "^22.13.1",
 		"@types/react": "^19.0.8",
 		"@types/react-dom": "^19.0.3",
 		"autoprefixer": "^10.4.20",
