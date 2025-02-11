@@ -1,6 +1,6 @@
 import sharp from "sharp";
 
-import { mongooseAdapter } from "@payloadcms/db-mongodb";
+import { sqliteAdapter } from "@payloadcms/db-sqlite";
 import { buildConfig } from "payload";
 
 import path from "path";
@@ -30,7 +30,12 @@ export default buildConfig({
 		user: Users.slug,
 	},
 	collections: collections,
-	db: mongooseAdapter({ url: env.DATABASE_URI }),
+	db: sqliteAdapter({
+		client: {
+			url: env.DATABASE_URI,
+			authToken: env.DATABASE_AUTH_TOKEN,
+		},
+	}),
 	editor: lexical,
 	email: resend,
 	globals: [],

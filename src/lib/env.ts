@@ -2,6 +2,7 @@ import zod from "zod";
 
 const envSchema = zod.object({
 	DATABASE_URI: zod.string().nonempty(),
+	DATABASE_AUTH_TOKEN: zod.string().nonempty(),
 	PAYLOAD_SECRET: zod.string().nonempty(),
 	RESEND_API_KEY: zod.string().nonempty(),
 	RESEND_FROM_EMAIL: zod.string().nonempty(),

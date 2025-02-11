@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b2765607-7916-4718-8256-dd708283b45e/deploy-status)](https://app.netlify.com/sites/payload-st-project/deploys)
-
 # The [XXXXX] Project
 
 Welcome to the repository for The [XXXXX] project. This repository houses the codebase for the dynamic and interactive website, showcasing our
@@ -29,7 +27,7 @@ delivering top-notch web solutions.
 ## Tech Stack
 
 - **Frontend:** Next.js version 15, TypeScript, Tailwind CSS and Shadcn UI.
-- **Backend:** Payload CMS, MongoDB and UploadThing Digital Asset Management.
+- **Backend:** Payload CMS, Turso and UploadThing Digital Asset Management.
 - **Deployment:** Vercel
 
 ## Getting Started
