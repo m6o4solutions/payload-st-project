@@ -15,19 +15,19 @@ commitment to excellence in web development.
 ## Introduction
 
 Superior Software Solutions is dedicated to transforming digital experiences. This website serves as a testament to our skills and commitment to
-delivering top-notch web solutions.
+delivering top-notch web solutions for clients.
 
 ## Features
 
 - **Dynamic Content:** Engage visitors with dynamic and personalized content.
 - **Interactive UI/UX:** Provide an immersive user experience with smooth navigation.
-- **Portfolio Showcase:** Highlight our successful projects and case studies.
+- **Portfolio Showcase:** Highlight successful projects and case studies.
 - **Contact Form:** Enable clients to reach out easily for inquiries and collaborations.
 
 ## Tech Stack
 
 - **Frontend:** Next.js version 15, TypeScript, Tailwind CSS and Shadcn UI.
-- **Backend:** Payload CMS, Turso and UploadThing Digital Asset Management.
+- **Backend:** Payload CMS, Turso DB and UploadThing Digital Asset Management.
 - **Deployment:** Vercel
 
 ## Getting Started
