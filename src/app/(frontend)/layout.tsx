@@ -14,7 +14,7 @@ import "@/styles/globals.css";
 
 export const metadata: Metadata = {
 	title: "Payload CMS Starter Template",
-	description: "Template to get started with Payload CMS, Next.js, Tailwind CSS and shadcn/ui.",
+	description: "Template to get started with Next.js, Payload 3.0, SQLite, Tailwind CSS and shadcn/ui.",
 };
 
 const fontHeader = FontHeader({ subsets: ["latin"], variable: "--font-header" });
