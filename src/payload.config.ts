@@ -1,39 +1,49 @@
-// storage-adapter-import-placeholder
-import { sqliteAdapter } from "@payloadcms/db-sqlite";
-import { payloadCloudPlugin } from "@payloadcms/payload-cloud";
-import { lexicalEditor } from "@payloadcms/richtext-lexical";
-import path from "path";
-import { buildConfig } from "payload";
-import { fileURLToPath } from "url";
 import sharp from "sharp";
 
-import { Users } from "./payload/collections/users/schema";
-import { Media } from "./payload/collections/media/schema";
+import { sqliteAdapter } from "@payloadcms/db-sqlite";
+import { buildConfig } from "payload";
+
+import path from "path";
+import { fileURLToPath } from "url";
+
+import { collections } from "@/payload/collections";
+import { Users } from "@/payload/collections/users/schema";
+
+import { lexical } from "@/payload/fields/lexical";
+import { resend } from "@/payload/fields/resend";
+
+import { plugins } from "@/payload/plugins/schema";
+
+import { env } from "@/lib/env";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 export default buildConfig({
 	admin: {
-		user: Users.slug,
 		importMap: {
 			baseDir: path.resolve(dirname),
 		},
+		meta: {
+			titleSuffix: " | Superior Software Solutions",
+		},
+		user: Users.slug,
 	},
-	collections: [Users, Media],
-	editor: lexicalEditor(),
-	secret: process.env.PAYLOAD_SECRET || "",
-	typescript: {
-		outputFile: path.resolve(dirname, "payload-types.ts"),
-	},
+	collections: collections,
 	db: sqliteAdapter({
 		client: {
-			url: process.env.DATABASE_URI || "",
+			url: env.DATABASE_URI,
+			authToken: env.DATABASE_AUTH_TOKEN,
 		},
 	}),
+	editor: lexical,
+	email: resend,
+	globals: [],
+	plugins: [...plugins],
+	secret: env.PAYLOAD_SECRET,
 	sharp,
-	plugins: [
-		payloadCloudPlugin(),
-		// storage-adapter-placeholder
-	],
+	typescript: {
+		autoGenerate: true,
+		outputFile: path.resolve(dirname, "payload-types.ts"),
+	},
 });
