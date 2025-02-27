@@ -1,59 +1,30 @@
-import { headers as getHeaders } from 'next/headers.js'
-import Image from 'next/image'
-import { getPayload } from 'payload'
-import React from 'react'
-import { fileURLToPath } from 'url'
+import Link from "next/link";
 
-import config from '@/payload.config'
-import './styles.css'
+import { Button } from "@/ui/button";
+import { Container } from "@/components/container";
 
-export default async function HomePage() {
-  const headers = await getHeaders()
-  const payloadConfig = await config
-  const payload = await getPayload({ config: payloadConfig })
-  const { user } = await payload.auth({ headers })
+const HomePage = () => {
+	return (
+		<Container>
+			<article>
+				<section className="pt-36 pb-36">
+					<h1 className="font-header text-4xl font-bold tracking-wide text-sky-800">Payload Starter Template</h1>
 
-  const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
+					<p className="my-5">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, cum reprehenderit. Doloremque
+						corrupti aliquid nihil magnam impedit, quisquam soluta? Expedita et dolorum quo laudantium odio esse,
+						distinctio nulla hic ea.
+					</p>
 
-  return (
-    <div className="home">
-      <div className="content">
-        <picture>
-          <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg" />
-          <Image
-            alt="Payload Logo"
-            height={65}
-            src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg"
-            width={65}
-          />
-        </picture>
-        {!user && <h1>Welcome to your new project.</h1>}
-        {user && <h1>Welcome back, {user.email}</h1>}
-        <div className="links">
-          <a
-            className="admin"
-            href={payloadConfig.routes.admin}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Go to admin panel
-          </a>
-          <a
-            className="docs"
-            href="https://payloadcms.com/docs"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Documentation
-          </a>
-        </div>
-      </div>
-      <div className="footer">
-        <p>Update this page by editing</p>
-        <a className="codeLink" href={fileURL}>
-          <code>app/(frontend)/page.tsx</code>
-        </a>
-      </div>
-    </div>
-  )
-}
+					<Button className="rounded-lg font-semibold uppercase" variant="default" asChild>
+						<Link href="/admin" target="_blank">
+							Admin Area
+						</Link>
+					</Button>
+				</section>
+			</article>
+		</Container>
+	);
+};
+
+export default HomePage;
