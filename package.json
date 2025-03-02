@@ -38,7 +38,7 @@
 		"cross-env": "^7.0.3",
 		"embla-carousel-react": "^8.5.2",
 		"graphql": "^16.10.0",
-		"lucide-react": "^0.476.0",
+		"lucide-react": "^0.477.0",
 		"motion": "^12.4.7",
 		"next": "^15.2.0",
 		"next-themes": "^0.4.4",
@@ -55,14 +55,15 @@
 	"devDependencies": {
 		"@eslint/eslintrc": "^3.3.0",
 		"@tailwindcss/typography": "^0.5.16",
-		"@types/node": "^22.13.5",
+		"@types/node": "^22.13.8",
 		"@types/react": "^19.0.10",
 		"@types/react-dom": "^19.0.4",
 		"eslint": "^9.21.0",
 		"eslint-config-next": "^15.2.0",
+		"eslint-config-prettier": "^10.0.2",
 		"prettier": "^3.5.2",
 		"prettier-plugin-tailwindcss": "^0.6.11",
-		"typescript": "^5.7.3"
+		"typescript": "^5.8.2"
 	},
 	"engines": {
 		"node": "^18.20.2 || >=20.9.0",
