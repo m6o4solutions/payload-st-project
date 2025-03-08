@@ -1,0 +1,77 @@
+{
+	"name": "payload-st-project",
+	"version": "2.0.0",
+	"description": "Template to get started with Next.js, Payload 3.0, SQLite, Tailwind CSS and shadcn/ui.",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+		"dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+		"devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
+		"generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+		"generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+		"lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+		"payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+		"start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+	},
+	"dependencies": {
+		"@payloadcms/db-sqlite": "latest",
+		"@payloadcms/email-resend": "latest",
+		"@payloadcms/live-preview-react": "latest",
+		"@payloadcms/next": "latest",
+		"@payloadcms/plugin-form-builder": "latest",
+		"@payloadcms/plugin-search": "latest",
+		"@payloadcms/plugin-seo": "latest",
+		"@payloadcms/richtext-lexical": "latest",
+		"@payloadcms/storage-uploadthing": "latest",
+		"@payloadcms/ui": "latest",
+		"@radix-ui/react-accordion": "^1.2.3",
+		"@radix-ui/react-checkbox": "^1.1.4",
+		"@radix-ui/react-dropdown-menu": "^2.1.6",
+		"@radix-ui/react-label": "^2.1.2",
+		"@radix-ui/react-select": "^2.1.6",
+		"@radix-ui/react-separator": "^1.1.2",
+		"@radix-ui/react-slot": "^1.1.2",
+		"@tailwindcss/postcss": "^4.0.12",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"cross-env": "^7.0.3",
+		"embla-carousel-react": "^8.5.2",
+		"graphql": "^16.10.0",
+		"lucide-react": "^0.477.0",
+		"motion": "^12.4.10",
+		"next": "^15.2.1",
+		"next-themes": "^0.4.4",
+		"payload": "latest",
+		"postcss": "^8.5.3",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"sharp": "^0.33.5",
+		"tailwind-merge": "^3.0.2",
+		"tailwindcss": "^4.0.12",
+		"tailwindcss-animate": "^1.0.7",
+		"zod": "^3.24.2"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.0",
+		"@tailwindcss/typography": "^0.5.16",
+		"@types/node": "^22.13.9",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"eslint": "^9.22.0",
+		"eslint-config-next": "^15.2.1",
+		"eslint-config-prettier": "^10.1.1",
+		"prettier": "^3.5.3",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"typescript": "^5.8.2"
+	},
+	"engines": {
+		"node": "^18.20.2 || >=20.9.0",
+		"pnpm": "^10"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"sharp"
+		]
+	}
+}

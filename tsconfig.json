@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"lib": ["DOM", "DOM.Iterable", "ES2022"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"paths": {
+			"@/*": ["./src/*"],
+			"@/components/*": ["./src/components/*"],
+			"@/lib/*": ["./src/lib/*"],
+			"@/payload/*": ["./src/payload/*"],
+			"@/payload-config": ["./src/payload.config.ts"],
+			"@/styles/*": ["./src/styles/*"],
+			"@/ui/*": ["./src/components/ui/*"],
+			"@/utils": ["./src/lib/utils.ts"]
+		},
+		"target": "ES2022"
+	},
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/payload/blocks/.gitkeep"],
+	"exclude": ["node_modules"]
+}
