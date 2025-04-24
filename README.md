@@ -27,7 +27,7 @@ skills and commitment to delivering top-notch web solutions for clients.
 ## Tech Stack
 
 - **Frontend:** Next.js, TypeScript, Tailwind CSS and Shadcn UI.
-- **Backend:** Payload CMS, Turso DB and UploadThing Digital Asset Management.
+- **Backend:** Payload CMS, Mongo DB and UploadThing Digital Asset Management.
 - **Deployment:** Vercel
 
 ## Getting Started
