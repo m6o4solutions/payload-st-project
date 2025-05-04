@@ -5,6 +5,9 @@ import { env } from "@/lib/env";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+	turbopack: {
+		resolveExtensions: [".mdx", ".tsx", ".ts", ".jsx", ".js", ".mjs", ".json"],
+	},
 	images: {
 		remotePatterns: [
 			(() => {
@@ -20,4 +23,4 @@ const nextConfig: NextConfig = {
 	},
 };
 
-export default withPayload(nextConfig);
+export default withPayload(nextConfig, { devBundleServerPackages: false });
